@@ -1,0 +1,149 @@
+@charset "UTF-8";
+/* 공통 */
+.hidden{display: none;}
+.inner{width: 90%; max-width: 1132px;margin:0 auto;}
+.para{color: #616161;font-family: "PT Serif", serif; font-size: 0.875em;line-height: 1.5;}
+.divider1{width: 90%; max-width: 1132px;margin:70px auto;background-color: #eee;}
+.divider2{width: 20%; max-width: 1132px;margin:70px auto;background-color: #3f51b5;}
+h2{font-size: 2.625em;color: #3f51b5;font-weight: normal;text-transform: uppercase;}
+
+/* 모바일영역 --------------------------------------*/
+
+/* header Area : width 100% 고정, 그림자효과 */
+header{width: 100%;height: 50px;background: #fff;box-shadow: 0 10px 10px rgba(133,133,133,0.3);position: fixed;z-index: 10;}
+
+/* 90%~80% 가운데 정렬 */
+header .header-inner{width: 90%;margin: auto;display: flex;justify-content: space-between;align-items: center;height: 50px;}
+
+/* 로고 */
+header .header-inner h1 a{color: #3f51b5;text-transform: uppercase;font-size: 1.563em;}
+
+/* 메뉴 */
+header .header-inner nav{position: absolute;top: 100%; left: 0;background-color: #3f51b5;width: 100%;}
+header .header-inner nav .gnb{display: none;}
+header .header-inner nav .gnb li{border-bottom: 1px solid #3a4baa;}
+header .header-inner nav .gnb li a{display: block;padding: 15px 0;color: #fff;text-transform: uppercase;font-size: 0.875em;text-indent: 20px;}
+
+/* 메뉴토글버튼 */
+header .menu-toggle-btn{text-indent: -9999px;width: 20px;height: 14px;display: flex;flex-flow: row wrap;align-content: space-between;cursor: pointer;}
+header .menu-toggle-btn span{width: 100%;height: 2px;background-color: #3f51b5;}
+
+/* mo-slide 영역 */
+.slide{width: 100%;}
+.slide img{width: 100%;max-width: 100%;margin-top: 50px;}
+
+/* mo-디스플레이 영역 */
+.display{text-align: center;margin-top: 50px;}
+.display p{margin-top: 20px;}
+
+/* mo-프로모션 영역 */
+.promotion{margin-top: 50px;}
+.promotion .promotion-list{}
+.promotion .promotion-list li{text-align: center;margin-top: 30px;}
+.promotion .promotion-list li img{height: 50px;}
+.promotion .promotion-list li h3{margin: 20px 0 10px;text-transform: uppercase;font-weight: normal;color: #3f51b5;}
+
+/* mo-워크영역 */
+.work{width: 100%;}
+.work h2{text-align: center;margin-bottom: 30px;}
+
+/* 마우스 호버하면 파란배경 */
+.work .work-list li a{display: block;width: 100%;height: 100%;position: relative;}
+.work .work-list li a::before{display: block;content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #3f51b5;opacity: 0;}
+.work .work-list li a:hover::before{opacity: 0.8;}
+
+/* 호버하면 list-info 위에서 아래로 */
+.work .work-list li a .list-info{position: absolute;top: 0;left: 0; color: #fff;text-transform: uppercase;transition: all 0.3s;opacity: 0;}
+.work .work-list li a:hover .list-info{opacity: 1;transform: translateY(20px);}
+.work .work-list li a .list-info h3{margin-bottom: 3px;font-size: 0.938em;}
+.work .work-list li a .list-info span{font-size: 0.813em;}
+.work .work-list li a img{width: 100%;max-width: 100%;}
+
+/* mo-블로그 영역 */
+.blog h2{margin-bottom: 30px;text-align: center;}
+.blog .blog-list li{margin-bottom: 50px;}
+.blog .blog-list li a{width: 100%;text-align: left;}
+.blog .blog-list li a img{width: 100%;max-width: 100%;}
+.blog .blog-list li a time{text-align: left;display: block;margin: 10px 0;text-transform: uppercase;font-size: 0.688em;color: #424242;}
+.blog .blog-list li a p{color: #424242;font-size: 1.655em;}
+
+/* mo-콘텍트 영역 */
+.contact h2{text-align: center;margin-bottom: 30px;}
+.contact .contact-form{width: 100%;}
+.contact .contact-form form{display: flex;flex-wrap: wrap;justify-content: flex-end;}
+.contact .contact-form fieldset .box1{margin-bottom: 30px;}
+.contact .contact-form fieldset .box1 input{padding: 10px 0;margin-bottom: 10px;text-indent: 10px;width: 100%;}
+.contact .contact-form fieldset{width: 100%;}
+.contact .contact-form fieldset .box2 textarea{height: 150px;padding: 10px;}
+.contact .contact-form form button{margin-top: 30px;border: 0;display: block;padding: 10px;background: #3f51b5;color: #fff;text-transform: uppercase;cursor: pointer;}
+
+/* mo-푸더 영역 */
+footer{margin-top: 50px;}
+footer iframe{width: 100%;max-width: 100%;height: 300px;}
+footer p{padding: 20px 0;text-align: center;text-transform: uppercase;color: #3f51b5;font-size: 2vw;}
+
+
+/* 태블릿영역 --------------------------------------*/
+@media all and (min-width : 760px){
+
+  /* tab-헤더영역 */
+header .header-inner nav{position: static;background: none;}
+header .header-inner nav .gnb{display: flex !important;justify-content: flex-end;}
+header .header-inner nav .gnb li{border-bottom: 0;}
+header .header-inner nav .gnb li a{color: #3f51b5;}
+
+header .menu-toggle-btn{display: none;}
+
+/* tab-프로모션 영역 */
+.promotion{margin-top: 70px;}
+.promotion .promotion-list{display: flex;justify-content: space-between;}
+.promotion .promotion-list li{width: 22%;}
+
+/* tab-워크 영역 */
+.work .work-list{display: flex;flex-flow: row wrap;}
+.work .work-list li{width: 50%;}
+
+/* tab-블로그 영역 */
+.blog .blog-list{display: flex;justify-content: space-between;}
+.blog .blog-list li{width: 32%;}
+
+/* tab-콘텍트 영역 */
+.contact .contact-form form fieldset{display: flex;justify-content: space-between;}
+.contact .contact-form form fieldset div{width: 48%;}
+.contact .contact-form form fieldset .box1{display: flex;flex-wrap: wrap;align-content: space-between;height: 170px;}
+.contact .contact-form form fieldset .box1 input{width: 100%;margin-bottom: 0;}
+
+/* tab-푸터 영역 */
+footer iframe{height: 400px;}
+
+}/*end*/
+
+
+/* PC ---------------------------------------------*/
+@media all and (min-width : 1132px){
+
+/* pc-헤더 */
+.header-inner{width: 80% !important;}
+
+/* pc-디스플레이 영역 */
+.display{display: flex;text-align: left;}
+.display h2{width: 40%;}
+.display .para{margin-top: 0;width: 48%;position: relative;}
+.display .para::before{content: "";display: block;width: 2px;height: 40px;background-color: #ccc;position: absolute;top: 3px;left: -15px;}
+
+/* pc-워크 영역 */
+.work .work-list li{width: 25%;}
+
+/* pc-블로그 영역 */
+.blog{display: flex;justify-content: space-between;}
+.blog .blog-list{width: 80%;}
+
+/* pc-콘텍트 영역 */
+.contact{display: flex;justify-content: space-between;}
+.contact .contact-form{width: 80%;}
+
+/* pc-footer */
+footer iframe{height: 500px;}
+footer p{font-size: 0.875em;}
+
+}/*end*/
