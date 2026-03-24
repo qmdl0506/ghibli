@@ -40,7 +40,8 @@ header .menu-toggle-btn span{width: 100%;height: 2px;background-color: #3f51b5;}
 .promotion{margin-top: 50px;}
 .promotion .promotion-list{}
 .promotion .promotion-list li{text-align: center;margin-top: 30px;}
-.promotion .promotion-list li img{height: 50px;}
+.promotion .promotion-list li img{height: 50px;transition: all 0.3s;}
+.promotion .promotion-list li img:hover{transform: scale(1.3);}
 .promotion .promotion-list li h3{margin: 20px 0 10px;text-transform: uppercase;font-weight: normal;color: #3f51b5;}
 
 /* mo-워크영역 */
@@ -63,7 +64,8 @@ header .menu-toggle-btn span{width: 100%;height: 2px;background-color: #3f51b5;}
 .blog h2{margin-bottom: 30px;text-align: center;}
 .blog .blog-list li{margin-bottom: 50px;}
 .blog .blog-list li a{width: 100%;text-align: left;}
-.blog .blog-list li a img{width: 100%;max-width: 100%;}
+.blog .blog-list li a img{width: 100%;max-width: 100%;transition: all 0.3s;}
+.blog .blog-list li a img:hover{filter: grayscale(100%);}
 .blog .blog-list li a time{text-align: left;display: block;margin: 10px 0;text-transform: uppercase;font-size: 0.688em;color: #424242;}
 .blog .blog-list li a p{color: #424242;font-size: 1.655em;}
 
